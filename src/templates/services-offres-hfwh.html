@@ -1,0 +1,45 @@
+<!--
+'aware:...' to pass client.number to nested children and access it with clientNumber as variable. However in the main, use 'client.number', as with the default 'page' variable.
+  ie. <x-main aware:clientNumber="{{ client.number }}">
+-->
+
+<x-main>
+  <div class="bg-white font-sans flex justify-center w-screen h-screens text-gzf-primary">
+    <div class="min-w-gzf-min max-w-gzf-max border border-solid border-gzf-gray-light">
+      <table>
+        <!-- header -->
+        <tr><td>
+          <x-common.header />
+        </td></tr>
+
+        <!-- page 1 -->
+        <tr><td>
+          <x-services-offres.common.page-1 />
+        </td></tr>
+
+        <tr><td><x-divider /></td></tr>
+
+        <!-- page 2 -->
+        <tr><td>
+          <x-services-offres.hfwh.page-2 />
+          <!-- OR <component src="src/components/services-offres/hf/page-2.html" /> -->
+        </td></tr>
+
+        <tr><td><x-divider /></td></tr>
+
+        <!-- page 3 -->
+        <tr><td>
+          <x-services-offres.hfwh.page-3 />
+          <!-- OR <component src="src/components/services-offres/hf/page-3.html" /> -->
+        </td></tr>
+
+        <tr><td><x-divider /></td></tr>
+
+        <!-- footer -->
+        <tr><td>
+          <x-common.footer />
+        </td></tr>
+      </table>
+    </div>
+  </div>
+</x-main>

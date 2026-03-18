@@ -1,0 +1,40 @@
+/*
+ * Here is where you can define your custom utility classes.
+ *
+ * We wrap them in the `utilities` @layer directive, so
+ * that Tailwind moves them to the correct location.
+ *
+ * More info:
+ * https://tailwindcss.com/docs/functions-and-directives#layer
+*/
+
+@layer utilities {
+  .break-word {
+    word-break: break-word;
+  }
+
+  .gzf-responsive {
+    @apply flex flex-row sm:flex-col;
+  }
+
+  .gzf-responsive-width {
+    @apply w-1/2 sm:w-auto;
+  }
+
+  .gzf-space-col-left,
+  .gzf-space-col-right {
+    @apply mx-5;
+  }
+
+  .gzf-image-rounded {
+    @apply rounded mb-5;
+  }
+
+  .gzf-list-pl {
+    @apply pl-5;
+  }
+
+  .gzf-image-border {
+    @apply border border-gzf-gray-light border-solid rounded py-5 px-10;
+  }
+}

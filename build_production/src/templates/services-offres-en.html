@@ -1,0 +1,698 @@
+<!--
+'aware:...' to pass client.number to nested children and access it with clientNumber as variable. However in the main, use 'client.number', as with the default 'page' variable.
+  ie. <x-main aware:clientNumber="{{ client.number }}">
+-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+  <meta charset="utf-8">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings xmlns:o="urn:schemas-microsoft-com:office:office">
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <style>
+    td,th,div,p,a,h1,h2,h3,h4,h5,h6 {font-family: "Segoe UI", sans-serif; mso-line-height-rule: exactly;}
+  </style>
+  <![endif]-->
+  <style>
+    /* Your custom CSS resets for email */
+    /*
+ * Here is where you can add your global email CSS resets.
+ *
+ * We use a custom, email-specific CSS reset, instead
+ * of Tailwind's web-optimized `base` layer.
+ *
+ * Styles defined here will be inlined.
+*/
+    img {
+      max-width: 100%;
+      vertical-align: middle
+    }
+    /* Tailwind CSS components */
+    /**
+ * @import here any custom CSS components - that is, CSS that
+ * you'd want loaded before the Tailwind utilities, so the
+ * utilities can still override them.
+*/
+    /* Tailwind CSS utility classes */
+    .visible {
+      visibility: visible !important
+    }
+    .absolute {
+      position: absolute !important
+    }
+    .m-0 {
+      margin: 0 !important
+    }
+    .mb-2 {
+      margin-bottom: 8px !important
+    }
+    .mb-2_5 {
+      margin-bottom: 10px !important
+    }
+    .mb-5 {
+      margin-bottom: 20px !important
+    }
+    .ml-5 {
+      margin-left: 20px !important
+    }
+    .mr-5 {
+      margin-right: 20px !important
+    }
+    .mt-4 {
+      margin-top: 16px !important
+    }
+    .mt-6 {
+      margin-top: 24px !important
+    }
+    .inline-block {
+      display: inline-block !important
+    }
+    .flex {
+      display: flex !important
+    }
+    .table {
+      display: table !important
+    }
+    .hidden {
+      display: none !important
+    }
+    .w-30 {
+      width: 120px !important
+    }
+    .w-full {
+      width: 100% !important
+    }
+    .w-screen {
+      width: 100vw !important
+    }
+    .min-w-gzf-min {
+      min-width: 550px !important
+    }
+    .max-w-gzf-max {
+      max-width: 1000px !important
+    }
+    .items-end {
+      align-items: flex-end !important
+    }
+    .justify-center {
+      justify-content: center !important
+    }
+    .justify-between {
+      justify-content: space-between !important
+    }
+    .justify-self-start {
+      justify-self: start !important
+    }
+    .justify-self-end {
+      justify-self: end !important
+    }
+    .justify-self-center {
+      justify-self: center !important
+    }
+    .rounded {
+      border-radius: 4px !important
+    }
+    .rounded-full {
+      border-radius: 9999px !important
+    }
+    .rounded-l-full {
+      border-top-left-radius: 9999px !important;
+      border-bottom-left-radius: 9999px !important
+    }
+    .rounded-r-full {
+      border-top-right-radius: 9999px !important;
+      border-bottom-right-radius: 9999px !important
+    }
+    .border {
+      border-width: 1px !important
+    }
+    .border-solid {
+      border-style: solid !important
+    }
+    .border-gzf-gray-light {
+      border-color: #d0d0ce !important
+    }
+    .bg-gzf-primary {
+      background-color: #53575b !important
+    }
+    .bg-gzf-yellow {
+      background-color: #ffb81c !important
+    }
+    .bg-slate-300 {
+      background-color: #cbd5e1 !important
+    }
+    .bg-white {
+      background-color: #fffffe !important
+    }
+    .bg-gzf-icon-size {
+      background-size: 20px !important
+    }
+    .bg-no-repeat {
+      background-repeat: no-repeat !important
+    }
+    .p-0 {
+      padding: 0 !important
+    }
+    .px-6 {
+      padding-left: 24px !important;
+      padding-right: 24px !important
+    }
+    .px-7 {
+      padding-left: 28px !important;
+      padding-right: 28px !important
+    }
+    .py-4 {
+      padding-top: 16px !important;
+      padding-bottom: 16px !important
+    }
+    .py-7 {
+      padding-top: 28px !important;
+      padding-bottom: 28px !important
+    }
+    .pb-2 {
+      padding-bottom: 8px !important
+    }
+    .pb-3 {
+      padding-bottom: 12px !important
+    }
+    .pb-5 {
+      padding-bottom: 20px !important
+    }
+    .pl-24 {
+      padding-left: 96px !important
+    }
+    .pl-6 {
+      padding-left: 24px !important
+    }
+    .pl-7 {
+      padding-left: 28px !important
+    }
+    .pr-10 {
+      padding-right: 40px !important
+    }
+    .pr-3 {
+      padding-right: 12px !important
+    }
+    .pr-7 {
+      padding-right: 28px !important
+    }
+    .pt-12 {
+      padding-top: 48px !important
+    }
+    .pt-7 {
+      padding-top: 28px !important
+    }
+    .text-left {
+      text-align: left !important
+    }
+    .text-center {
+      text-align: center !important
+    }
+    .text-right {
+      text-align: right !important
+    }
+    .align-super {
+      vertical-align: super !important
+    }
+    .font-sans {
+      font-family: Tahoma, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif !important
+    }
+    .text-2xl {
+      font-size: 24px !important
+    }
+    .text-base-none {
+      font-size: 16px !important;
+      line-height: 1 !important
+    }
+    .text-base-tight {
+      font-size: 16px !important;
+      line-height: 1.25 !important
+    }
+    .text-lg {
+      font-size: 18px !important
+    }
+    .text-sm {
+      font-size: 14px !important
+    }
+    .text-xs {
+      font-size: 12px !important
+    }
+    .font-semibold {
+      font-weight: 600 !important
+    }
+    .uppercase {
+      text-transform: uppercase !important
+    }
+    .italic {
+      font-style: italic !important
+    }
+    .leading-normal {
+      line-height: 1.5 !important
+    }
+    .text-gzf-primary {
+      color: #53575b !important
+    }
+    .text-gzf-yellow {
+      color: #ffb81c !important
+    }
+    .filter {
+      filter: undefined !important
+    }
+    .no-underline {
+      text-decoration: none !important
+    }
+    .gzf-responsive {
+      display: flex;
+      flex-direction: row
+    }
+    @media (max-width: 600px) {
+      .gzf-responsive {
+        flex-direction: column
+      }
+    }
+    .gzf-responsive-width {
+      width: 50%
+    }
+    @media (max-width: 600px) {
+      .gzf-responsive-width {
+        width: auto
+      }
+    }
+    .gzf-space-col-left,
+    .gzf-space-col-right {
+      margin-left: 20px;
+      margin-right: 20px
+    }
+    .gzf-image-rounded {
+      margin-bottom: 20px;
+      border-radius: 4px
+    }
+    .gzf-list-pl {
+      padding-left: 20px
+    }
+    .gzf-image-border {
+      border-radius: 4px;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #d0d0ce;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 40px;
+      padding-right: 40px
+    }
+    .-webkit-font-smoothing-antialiased {
+      -webkit-font-smoothing: antialiased !important
+    }
+    .word-break-break-word {
+      word-break: break-word !important
+    }
+    /* Your custom utility classes */
+    /*
+ * Here is where you can define your custom utility classes.
+ *
+ * We wrap them in the `utilities` @layer directive, so
+ * that Tailwind moves them to the correct location.
+ *
+ * More info:
+ * https://tailwindcss.com/docs/functions-and-directives#layer
+*/
+    .hover-no-underline:hover {
+      text-decoration: none !important
+    }
+    @media (max-width: 600px) {
+      .sm-mb-3 {
+        margin-bottom: 12px !important
+      }
+      .sm-ml-7 {
+        margin-left: 28px !important
+      }
+      .sm-mr-7 {
+        margin-right: 28px !important
+      }
+      .sm-items-center {
+        align-items: center !important
+      }
+      .sm-justify-self-center {
+        justify-self: center !important
+      }
+    }
+  </style>
+
+</head>
+<body class="m-0 p-0 w-full word-break-break-word -webkit-font-smoothing-antialiased">
+  <div role="article" aria-roledescription="email" aria-label="" lang="en">
+
+    <div class="bg-white font-sans flex justify-center w-screen h-screens text-gzf-primary">
+      <div class="min-w-gzf-min max-w-gzf-max border border-solid border-gzf-gray-light">
+        <table cellpadding="0" cellspacing="0" role="none">
+          <!-- header -->
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" role="none">
+                <tr>
+                  <td>
+                    <div class="bg-gzf-primary flex justify-between items-end pl-7 pr-3 pt-12 pb-2" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/banniere-scaled.jpeg') no-repeat top right/100%;">
+                      <h1 class="text-gzf-yellow uppercase m-0 mb-2_5 text-2xl">Welcome to<br>Enbridge Gaz Québec!</h1>
+                      <div>
+                        <img class="w-30 align-super" src="https://enbridgegaz.com/wp-content/uploads/2024/11/Enbridge2024_Gazifere-devient-EGQ-V3-BJ.logo.cropped.png" alt="Enbridge Gaz Québec logo">
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-7 pt-7 pb-3 flex justify-between items-end">
+                    <h3 class="text-lg m-0">Madame, Monsieur,</h3>
+                    <p class="m-0">CLIENT ACCOUNT: @CUSTOMERNUMBER@ - @ACCOUNTNUMBER@</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-7">
+                    <p>You are now a Enbridge Gaz Québec customer! Thank you for having chosen an energy source like no other, synonymous with comfort and energy efficiency. We are writing to ask you to please validate the information we have on file to ensure the accuracy of our records.</p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <!-- page 1 -->
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" role="none">
+                <tr>
+                  <td class="gzf-responsive">
+                    <!-- col left -->
+                    <div class="gzf-responsive-width">
+                      <div class="gzf-space-col-left">
+                        <p>If you are the owner of this address, and it is being rented by someone:</p>
+                        <ul class="gzf-list-pl">
+                          <li>Please notify your tenant that he or she should contact us as soon as possible to complete the transfer
+                            of responsibility. We will not be able to make any changes without your tenant’s consent.</li>
+                        </ul>
+                        <p>If you are the resident owner of this address or the resident tenant at this address:</p>
+                        <ul class="gzf-list-pl">
+                          <li>To complete your file, please notify us of any incorrect or missing information and your corrections by
+                            calling our Customer Portal at
+
+                            <a class="text-gzf-yellow italic hover-no-underline" href="tel:+18197718321" target="_blank">1-819-771-8321</a>
+                            , or by writing to
+
+                            <a class="text-gzf-yellow italic hover-no-underline" href="mailto:infogaz@enbridge.com" target="_blank">infogaz@enbridge.com</a>
+                            .
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="gzf-space-col-left">
+                        <p>Click below to access a form you will need to fill out (it will only take a few minutes):</p>
+                        <p>
+
+                          <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/welcome-to-enbridge-gaz-quebec/" target="_blank">Welcome to Enbridge Gaz - Enbridge Gaz Québec</a>
+                        </p>
+                        <p>According to our terms of service, the contract between you and Enbridge Gaz Québec comes into effect once your
+                          natural gas service application is approved. Even though the contract is not in writing, it remains in
+                          effect until it is terminated by the customer or Enbridge Gaz Québec.</p>
+                      </div>
+                      <h3 class="gzf-space-col-left">Manage your consumption and your bills from your Customer Portal!
+                      </h3>
+                      <!--
+By default, the rounded side is on the right.
+Set 'left' attribute to have the rounded side on the left.
+-->
+
+
+                      <div class="bg-gzf-yellow text-gzf-primary rounded-r-full pl-7 pr-10 py-7 mr-5 mb-5 sm-mr-7">
+
+                        <h3>Did you know?</h3>
+                        <p>You can spread the total cost of your annual natural gas consumption across 12 monthly bills. Your monthly
+                          payments are reviewd twice a year, in March/April and in September, to align with your consumption and the
+                          price of natural gas. Are you interested ?</p>
+                        <p>All it takes is a few clicks : it’s simple and quick!</p>
+                        <p><a class="text-gzf-primary italic" href="https://enbridgegaz.com/en/my-bill/" target="_blank">My Bill - Enbridge Gaz Québec</a></p>
+
+                      </div>
+
+                      <p class="gzf-space-col-left">Your Customer Portal, accessible through
+
+                        <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/" target="_blank">www.enbridgegaz.com</a>
+                        , lets you check your bill, your transaction history, your current charges and
+                        your payment arrangements!
+                      </p>
+                    </div>
+
+                    <!-- col right -->
+                    <div class="gzf-space-col-right gzf-responsive-width">
+                      <h3>Do you have questions about your bill?</h3>
+                      <p>Account number, consumption history and determination, status of your account... understand your bill at a
+                        glance using our example :</p>
+                      <div class="gzf-image-border">
+                        <img src="https://enbridgegaz.com/wp-content/uploads/2024/10/facture.jpg" width="100%" alt="Bill sample">
+                      </div>
+                      <h3>Enbridge Gaz Québec proposes different payment methods. Choose the one that best suits you!</h3>
+                      <ul class="gzf-list-pl">
+                        <li style="margin-bottom: 5px;">Pay your bill online through your banking institution.</li>
+                        <li>Sign up for the automatic withdrawals program: it’s simple and quick!
+                          <span class="text-gzf-yellow">Recommended</span>.
+                        </li>
+                      </ul>
+                      <h3>Adhere to gas from renewable sources</h3>
+                      <p>Since 2020, we have been offering our customers the option of contributing to a better environment by opting
+                        into the RSG rate. Customers who voluntarily agree to have part of their consumption billed at the RSG rate
+                        encourage the RSG program and help reduce GHG and methane emissions.</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+
+              <div role="separator" class="bg-slate-300" style="height: 1px; line-height: 1px; `background-color: ${color}; margin: 0; margin-top: 24px; margin-bottom: 24px; `margin-left: ${spaceX}; margin-right: ${spaceX}; `margin-top: ${top}; `margin-bottom: ${bottom}; `margin-right: ${right}` }}` }}` }}` }}` }}` }}">&zwj;</div>
+            </td>
+          </tr>
+
+          <!-- page 2 -->
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" role="none">
+                <tr>
+                  <td class="gzf-responsive">
+                    <!-- col left -->
+                    <div class="gzf-responsive-width">
+                      <div class="gzf-space-col-left">
+                        <h3>A few tips and tricks</h3>
+                        <h4>to optimize your consumption</h4>
+                        <ol class="gzf-list-pl">
+                          <li class="mb-2">Be in control with a smart thermostat. As your ally in your energy saving efforts, it adapts to yours habits preferences. You can control it remotely through you smartphone, as it responds to the temperature fluctuations in your home and integrates your routine. If you are eligible, when your purchase and install a smart thermostat, you will receive $100.</li>
+                          <li class="mb-2">Make the most of natural light: open your curtains on sunny days.</li>
+                          <li class="mb-2">Change your furnace filter! A clean filter helps deliver optimal performance. Change it every three months to maintain your system.</li>
+                          <li class="mb-2">Set your ceiling fan direction clockwise in winter to run your heating efficiently, and counter-clockwise in the summer to pull the hot air up. A simple trick to improve air circulation!</li>
+                          <li class="mb-2">Keep furnace intake and exhaust pipes clear of obstructions (*if you have a forced air system).</li>
+                        </ol>
+                        <p>As a rule, well-maintained appliances enable you to optimize your consumption! You’ll find all our tips at :</p>
+                        <p>
+
+                          <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/residential/existing-customer/consume-better/" target="_blank">Tips and tricks to consume better - Enbridge Gaz Québec</a>
+                        </p>
+                      </div>
+                      <!--
+By default, the rounded side is on the right.
+Set 'left' attribute to have the rounded side on the left.
+-->
+
+
+                      <div class="bg-gzf-yellow text-gzf-primary rounded-r-full pl-7 pr-10 py-7 mr-5 mb-5 sm-mr-7">
+
+                        <h3>Did you know?</h3>
+                        <p>Enbridge Gaz Québec offers you the chance to obtain cash incentive when you purchase and install an energy efficiency appliance!</p>
+
+                      </div>
+
+                      <div class="gzf-space-col-left">
+                        <p>Some examples:</p>
+                        <p>As a residential customer, you may be eligible for $400 when you install an air exchanger with heat recovery, $500 for a condensing tankless water heater or $850 for a high efficiency combined heating system (conditions apply).</p>
+                        <p class="text-xs mb-5">Certain conditions apply.</p>
+
+
+                        <div class="{{ align }}">
+                          <a href="https://enbridgegaz.com/en/residential/existing-customer/cash-incentives/" target="_blank" class="inline-block px-6 py-4 no-underline uppercase rounded-full text-center text-base-tight" style="color: #fff; background-color: #5E5E5E">
+                            <!--[if mso]>
+      <i style="mso-font-width: 150%; mso-text-raise: 30px;" hidden="">&emsp;</i>
+    <![endif]-->
+                            <span class="text-sm" style="mso-text-raise: 16px">
+            Cash Incentives - Enbridge Gaz Québec
+          </span>
+                            <!--[if mso]>
+      <i style="mso-font-width: 150%;" hidden="">&emsp;&#8203;</i>
+    <![endif]-->
+                          </a>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- col right -->
+                    <div class="gzf-space-col-right gzf-responsive-width">
+                      <h3>Are you thinking about getting a water heater?</h3>
+                      <p>The advantage of a tankless water heater is that it heats more water, on demand, and has a much longer lifespan than a conventional water heater.</p>
+                      <p>Opt for a thankless water heater starting at $31.99/month, for 180 months, and you could qualify for the cash incentive program.</p>
+                      <img class="gzf-image-rounded" src="https://enbridgegaz.com/wp-content/uploads/2024/10/kp-enbridge-gazfinal-230801-011.jpeg" width="100%" alt="Water heater">
+                      <h3>$500 cash incentive</h3>
+                      <p>Enbridge Gaz Québec offers a $500 cash incentive or a discount on monthly rental fees when you acquire and install a tankless water heater. This program is for residential customers replacing a natural gas fueled standard water heater that is more than 10 years old.</p>
+                      <h3>...or opt for location</h3>
+                      <p>Opt for a standard water heater starting at $15.29/month and tankless starting at $31.99/month, for a 120-month lease for a standard or force-vented water heater and 180 months for a tankless water heater, eligible for the cash incentive program.</p>
+                      <p>Opt for a rental furnace, starting at $46.95/month, for 180 months. You have a choice between a 60,000 – 80,000 – 100,000 or 120, 000 BTU unit.</p>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- OR <component src="src/components/services-offres/page-2-en.html" /> -->
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+
+              <div role="separator" class="bg-slate-300" style="height: 1px; line-height: 1px; `background-color: ${color}; margin: 0; margin-top: 24px; margin-bottom: 24px; `margin-left: ${spaceX}; margin-right: ${spaceX}; `margin-top: ${top}; `margin-bottom: ${bottom}; `margin-right: ${right}` }}` }}` }}` }}` }}` }}">&zwj;</div>
+            </td>
+          </tr>
+
+          <!-- page 3 -->
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" role="none">
+                <tr>
+                  <td class="gzf-responsive">
+                    <!-- col left -->
+                    <div class="gzf-space-col-left gzf-responsive-width">
+                      <h3>$850 cash incentive</h3>
+                      <p>High efficiency combined systems combine a tankless water heater and a fan-coil unit for superior energy efficiency and CSA P9 certification. This financial assitance is for residential customers (new and existing) submitted at Rate 2. Pre-admission must be obtained before starting the work.</p>
+                      <p>
+
+                        <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/energy-efficiency/high-efficiency-combined-heating-system/" target="_blank">High Efficiency Combined Heating System – Enbridge Gaz Québec</a>
+                      </p>
+                      <img class="gzf-image-rounded" src="https://enbridgegaz.com/wp-content/uploads/2024/10/Tech-WH1.jpg" width="100%" alt="Heating system">
+
+                      <p>You own your heating system and are subscribed to the plan Privilège, these are your perks :</p>
+                      <ul class="gzf-list-pl">
+                        <li style="margin-bottom: 5px;">covers labor and most defective part replacement costs</li>
+                        <li>includes cleaning (every two years) of your equipment</li>
+                      </ul>
+                      <p>The Plan Protégé does not allow you to benefit from cleaning. To upgrade to the Privilege Plan, call us at
+
+                        <a class="text-gzf-yellow italic hover-no-underline" href="tel:+18197718321" target="_blank">1-819-771-8321</a>
+                        .
+                      </p>
+
+                    </div>
+
+                    <!-- col right -->
+                    <div class="gzf-responsive-width mt-6">
+                      <!--
+By default, the rounded side is on the right.
+Set 'left' attribute to have the rounded side on the left.
+-->
+
+
+                      <div class="bg-gzf-yellow text-gzf-primary rounded-l-full pr-7 pl-24 py-7 ml-5 mb-5 sm-ml-7">
+
+                        <h3>Did you know?</h3>
+                        <p>Your meter must at all times be visible, and must never be covered by a tarp or any sort of structure. In the interest of safety, clear away any snow buildup.</p>
+                        <p>If your meter is covered in ice, contact our Customer Portal as soon as possible.</p>
+
+                      </div>
+
+                      <div class="gzf-space-col-right">
+                        <h3>Safety is everyone’s business, and a priority at Enbridge Gaz Québec</h3>
+                        <p>To ensure your safety and that of your family, have your equipment maintained by a certified natural gas professional. Have your air ducts and gas exhaust checked at the same time.</p>
+                        <p>Keep the area around your combustion equipment clean. Do not obstruct the display, air intake or exhaust.</p>
+                        <p>Enbridge Gaz Québec encourages its customers to check the batteries for their alarms when setting the clock back or forward!</p>
+                        <p>
+
+                          <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/safety-and-prevention/" target="_blank">Safety and Prevention - Enbridge Gaz Québec</a>
+                        </p>
+                        <h3>Are you going to be away for a while?</h3>
+                        <p>If you’re going to be away for a short while (less than two weeks), Enbridge Gaz Québec recommends you lower the thermostat setting by 2 or 3 degrees.</p>
+                        <p>Several appliances can be adapted while you’re away to optimize your heating or air conditioning. That’s the case, for instance, with standard natural gas water heater (connected to a chimney), which can be set a “vacation” mode. Power vent water heaters can simply be disconnected while you are away, and for additional safety, shut off the cold water supply to limit the risk of damage from leakage. For electric water heaters, switch off the power supply as well as the cold water supply. Save energy!</p>
+                        <p>
+
+                          <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/a-few-suggestions-before-you-go-on-vacation/" target="_blank">A Few Suggestions Before You Go On Vacation</a>
+                        </p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- OR <component src="src/components/services-offres/page-3-en.html" /> -->
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+
+              <div role="separator" class="bg-slate-300" style="height: 1px; line-height: 1px; `background-color: ${color}; margin: 0; margin-top: 24px; margin-bottom: 24px; `margin-left: ${spaceX}; margin-right: ${spaceX}; `margin-top: ${top}; `margin-bottom: ${bottom}; `margin-right: ${right}` }}` }}` }}` }}` }}` }}">&zwj;</div>
+            </td>
+          </tr>
+
+          <!-- footer -->
+          <tr>
+            <td>
+              <div class="gzf-responsive justify-between sm-items-center px-7 pb-5">
+                <div class="justify-self-start sm-justify-self-center pb-2 sm-mb-3">
+
+
+                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/enveloppe.png')" href="mailto:infogaz@enbridge.com" title="Send an email" target="_blank">
+                    infogaz@enbridge.com
+                  </a>
+
+                </div>
+                <div class="justify-self-start sm-justify-self-center pb-2 sm-mb-3">
+
+
+                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/tel.png')" href="tel:+1-819-771-8321" title="Call the number" target="_blank">
+                    1-819-771-8321
+                  </a>
+
+                </div>
+                <div class="justify-self-center pb-2 sm-mb-3">
+
+
+                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/localisation.png')" href="https://enbridgegaz.com/wp-content/uploadshttp://maps.google.com/?q=706, boulevard Gréber, Gatineau, QC J8V 3P8" title="Search the address" target="_blank">
+                    706, boulevard Gréber, Gatineau, QC J8V 3P8
+                  </a>
+
+                </div>
+                <div class="justify-self-end sm-justify-self-center pb-2 sm-mb-3">
+
+
+                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/clic.png')" href="https://www.enbridgegaz.com/en/" title="Visit the site" target="_blank">
+                    enbridgegaz.com
+                  </a>
+
+                </div>
+              </div>
+
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

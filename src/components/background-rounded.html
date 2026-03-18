@@ -1,0 +1,14 @@
+<!--
+By default, the rounded side is on the right.
+Set 'left' attribute to have the rounded side on the left.
+-->
+<script props>
+  module.exports = {
+    side: props.left ? 'rounded-l-full pr-7 pl-24 py-7 ml-5 mb-5 sm:ml-7' : 'rounded-r-full pl-7 pr-10 py-7 mr-5 mb-5 sm:mr-7',
+
+  }
+</script>
+
+<div class="bg-gzf-yellow text-gzf-primary {{ side }} ">
+  <yield />
+</div>

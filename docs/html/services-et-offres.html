@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services et Offres</title>
+    <style>
+        /* 
+        General
+            yellow: #FFB81C)
+            gray: #555 (text)
+            border: #DDD (light gray)
+        CTA
+            bg: #555
+            text: #FFF
+        footer
+            icon: #FFB81C
+            color: #555
+        
+        breakpoints (TailwindCSS) - min-width
+            tablet: 640px
+            laptop: 1024px
+            desktop: 1280px
+        */
+        .table-width {
+            max-width: 640px;
+            /* need to add min-width for small screens */
+        }
+
+        @media screen and (min-width: 640px) {
+            .table-width {
+                max-width: 1024px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="padding: 0; margin: 0; color: #555; background-color: #FFF; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: small;">
+    <table style="border-collapse: collapse;" class="table-width" cellspacing="0" cellpadding="0">
+        <!-- header -->
+        <tr>
+            <td style="background: #555 url('images/Facture_Banniere-photo.jpg') no-repeat top right/contain; padding: 60px 20px 10px 40px;"
+                colspan="2">
+                <h1 style="color: #FFB81C; width: 50%; display: inline-block; margin: 0; padding-bottom: 15px">
+                    BIENVENUE<br>CHEZ GAZIFÈRE!
+                </h1>
+                <div style="width: 49%; display: inline-block; text-align: right; vertical-align: bottom;">
+                    <img src="images/Gazifere_logo_blancjaune.png" width="30%" />
+                </div>
+            </td>
+        </tr>
+        <!-- body -->
+        <tr>
+            <td style="padding: 0 40px" colspan="2">
+                <p style="margin: 40px 0">NUMÉRO DE CLIENT : <span id="clientNumberPlaceholder">[will be replaced with
+                        dynamic value]</span></p>
+                <p>Madame, Monsieur,</p>
+                <p>Vous êtes client maintenant chez Gazifère! Merci d'avoir choisi une source d'énergie sans pareil,
+                    synonyme de confort et d'efficacité énergétique. Pour compléter votre dossier, il est important de
+                    valider l'exactitude des informations reçues, relatives à votre compte.</p>
+            </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #DDD">
+            <!-- left col -->
+            <td style="width: 50%; vertical-align: top;">
+                <div style="margin: 0 20px 0 40px">
+                    <p>Si vous êtes propriétaire à cette adresse qui est louée par un locataire :</p>
+                    <ul style="padding-left: 15px">
+                        <li>Veuillez svp aviser votre locataire qu'il est invité à communiquer avec nous
+                            le plus rapidement possible afin d'effectuer le transfert de responsabilité. Aucun
+                            changement ne pourra être fait sans que nous ayons obtenu le consentement de
+                            votre locataire.</li>
+                    </ul>
+                    <p>Si vous êtes propriétaire occupant à cette adresse ou, vous êtes le locataire occupant à cette
+                        adresse :</p>
+                    <ul style="padding-left: 15px;">
+                        <li>Pour compléter votre dossier, faites-nous part de toute donnée erronnée ou
+                            manquante et vos corrections en communiquant avec notre centre contact client au <a
+                                href="tel:+18197718321" style="color: #FFB81C">1-819-771-8321</a>, ou en écrivant à <a
+                                href="mailto:info@gazifere.com" style="color: #FFB81C">info@gazifere.com</a>.</li>
+                    </ul>
+                </div>
+                <div style="margin: 0 20px 0 40px">
+                    <p>Pour se faire, vous trouverez ici un formulaire à remplir (ceci ne prendra quelques
+                        minutes) :</p>
+                    <p><a href="https://gazifere.com/bienvenue-chez-gazifere/"
+                            style="font-style: italic; color: #FFB81C;">Bienvenue chez Gazifère</a></i></p>
+                    <p>Selon nos conditions de service, le contrat entre vous et Gazifère est conclu lorsque
+                        vous recevrez une approbation sur votre demande de service de gaz naturel. Même si le
+                        contrat n'est pas écrit, il demeure en vigueur jusqu'à ce qu'il soit résilié par le
+                        client ou par Gazifère.</p>
+                </div>
+                <h3 style="margin: 0 20px 0 40px">Gérez votre consommation et vos factures depuis votre Espace Client!
+                </h3>
+                <div
+                    style="background-color: #FFB81C; color: #555; margin: 10px 20px 10px 0; padding: 10px 30px 10px 40px; border-radius: 0 100px 100px 0;">
+                    <h3 style="padding-bottom: 10px">Le saviez-vous ?</h3>
+                    <p>Le mode de paiements étalés vous permet de répartir le coût total de votre
+                        consommation annuelle de gaz naturel en 12 factures mensuelles. Vos mensualités
+                        sont révisées 2 fois par année : en mars/avril et en septembre pour être en accord
+                        avec votre consommation et le prix du gaz naturel. Intéressé.e.s ?<br>Adhérez en
+                        quelques clics, c'est simple et rapide!</p>
+                    <p><a href="https://gazifere.com/ma-facture/" style="font-style: italic; color: #555;">Ma
+                            facture</a></p>
+                </div>
+                <p style="margin: 0 20px 0 40px">Sur <a href="www.gazifere.com"
+                        style="color: #FFB81C">www.gazifere.com</a>, votre Espace client
+                    vous permet d'accédez en tout temps à vos factures, l'historique de vos transactions, vos
+                    charges courantes ou encore vos arrangements de paiements!</p>
+                <div style="margin: 0 20px 0 40px">
+                    <h3>Des questions sur votre facture ?</h3>
+                    <p>Numéro de compte, historique et calcul de votre consommation, état de votre compte...
+                        comprenez votre facture en un coup d'oeil grâce à notre exemple :</p>
+                </div>
+            </td>
+            <!-- right col -->
+            <td style="width: 50%; padding: 10px 40px 0 0; vertical-align: top;">
+                <div style="padding: 20px 40px; border: 1px solid #DDD; border-radius: 5px"><img
+                        src="images/Exemple-de-facture-Gazifere.jpg" width="100%" /></div>
+                <h3>Gazifère vous propose différents moyens de paiement. Choisissez celui qui vous convient!
+                </h3>
+                <ul style="padding-left: 15px;">
+                    <li style="margin-bottom: 5px;">Rendez-vous sur le site de votre institution bancaire pour régler
+                        votre facture.
+                    </li>
+                    <li>Adhérez au programme de prélèvements automatiques : c'est simple et rapide!
+                        <span style="color: #FFB81C;">Recommandé</span>.
+                    </li>
+                </ul>
+                <h3>Adhérez au gaz de source renouvelable</h3>
+                <p>Depuis 2020, nous offrons à nos clients la possibilité de contribuer à un environnement
+                    meilleur en adhérant au tarif GSR. Les clients qui acceptent volontairement d'assujettir
+                    une part de leur consommation au tarif GSR encourage la filière du GSR et contribue à
+                    réduire les émissions de GES et de méthane.</p>
+            </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #DDD">
+            <!-- left col -->
+            <td style="vertical-align: top;">
+                <div style="margin: 0 20px 0 40px; vertical-align: top;">
+                    <h3 style="margin-block-end: 5px;">Quelques trucs et astuces</h3>
+                    <h4 style="margin-block-start: 0px; margin-block-end: 5px;">pour optimiser votre consommation</h4>
+                    <ol style="padding-left: 15px">
+                        <li style="margin-bottom: 5px">Gardez le contrôle avec un thermostat intelligent. Allié dans vos
+                            économies d'énergies, il vous offre une programmation basée sur vos habitudes et
+                            préférences. Contrôlable à distance grâce à votre téléphone intelligent, il vient répondre
+                            aux fluctuations de température de votre habitation et intègre votre routine. Si vous êtes
+                            éligibles, pour l'achat et l'installation d'un thermostat intelligent, recevez 100$.</li>
+                        <li style="margin-bottom: 5px">Misez sur la lumière naturelle : ouvrez vos rideaux lors des
+                            journées riche en soleil, la chaleur va ainsi venir réchauffer l'intérieur de votre
+                            habitation. En fin de journée, refermez vos rideaux pour garder la chaleur à l'intérieur.
+                        </li>
+                        <li style="margin-bottom: 5px">Changez le filtre de votre appareil de chauffage! Avec un filtre
+                            propre, votre appareil de chauffage vous offrira une performance optimale. Changez-le tous
+                            les 3 mois pour un bon entretien de votre appareil.</li>
+                        <li style="margin-bottom: 5px">Faites tourner vos ventilateurs de plafond : dans le sens des
+                            aiguilles d'une montre en hiver pour faire fonctionner votre chauffage efficacement et dans
+                            le sens inverse en été pour que l'air chaud monte. Un geste simple pour une meilleure
+                            circulation de l'air!</li>
+                        <li style="margin-bottom: 5px">N'obstruez pas les bouches d'air chaud et de retour d'air froid
+                            (*si vous disposez d'un système à air propulsé).</li>
+                    </ol>
+                    <p>De manière générale, des appareils bien entretenus vous permettront d'optimiser votre
+                        consommation et de sauver un maximum d'énergie! Retrouvez tous nos conseils juste ici :</p>
+                    <p><a href="https://gazifere.com/residentiel/deja-client/mieux-consommer/"
+                            style="font-style: italic; color: #FFB81C;">Mieux consommer</a></p>
+                </div>
+                <div
+                    style="background-color: #FFB81C; color: 555; margin-right: 20px; padding: 10px 20px 10px 40px; border-radius: 0 70px 70px 0;">
+                    <h3>Le saviez-vous ?</h3>
+                    <p>Gazifère vous offre la possibilité de bénéficier d'une aide financière lors de l'achat et de
+                        l'installation d'un appareil à efficacité énergétique!</p>
+                </div>
+                <div style="margin: 0 20px 0 40px">
+                    <p>Quelques exemples :</p>
+                    <p>Si vous êtes un client résidentiel, bénéficiez de : 400$ à l'instal- lation d'un échangeur d'air
+                        avec récupérateur de chaleur, 500$ pour un chauffe-eau sans réservoir à condensation ou encore
+                        850$ pour un système de chauffage combiné à haute efficacité.</p>
+                    <p style="font-size: x-small;">Certaines conditions s'appliquent.</p>
+                </div>
+                <div style="margin: 0 20px 0 40px;">
+                    <a href="https://gazifere.com/residentiel/deja-client/remises-en-argent/"
+                        style="width: 100%; display: block; color: #FFF; background-color: #555; text-align: center; text-decoration: none; padding: 10px 0; border-radius: 20px;">DÉCOUVREZ
+                        LES REMISES EN ARGENT POUR LES PARTICULIERS</a>
+                </div>
+            </td>
+            <!-- rigth col -->
+            <td style="padding-right: 40px; vertical-align: top;">
+                <h3>Vous avez dit « chauffe-eau » ?</h3>
+                <p>Un chauffe-eau sans réservoir à l'avantage de chauffer une plus grande quantité d'eau, à la demande
+                    et a une durée de vie beaucoup plus longue qu'un chauffe-eau conventionnel.</p>
+                <p>Optez pour un chauffe-eau sans réservoir à partir de 31.99$/ mois, pour une location de 180 mois et
+                    éligible au programme de remise en argent.</p>
+                <img src="images/kp-gaziferefinal-230801-011.jpg" width="100%" alt="" style="border-radius: 5px">
+                <h3>500$ de remise en argent</h3>
+                <p>Pour l'acquisition et l'installation d'un chauffe-eau sans réservoir, Gazifère vous offre une remise
+                    en argent de 500$ ou un rabais applicable aux tarifs mensuels de la location. Ce programme s'adresse
+                    aux clients résidentiels, en remplace- ment d'un chauffe-eau avec réservoir alimenté au gaz naturel,
+                    de plus de 10 ans.</p>
+                <h3>...ou choisissez la location</h3>
+                <p>Optez pour un chauffe-eau standard à partir de 15.29$/ mois et sans réservoir à partir de 31.99$/
+                    mois, pour une location de 120 mois pour un chauffe-eau standard ou à évacuation forcée et 180 mois
+                    pour un chauffe-eau sans réservoir, éligible au programme de remise en argent.</p>
+                <p>Optez pour une fournaise en location, à partir de 46,95$/mois sur une location de 180 mois. Plusieurs
+                    capacités (BTU) sont disponibles : 60 000, 80 000, 100 000 et 120 000.</p>
+            </td>
+        </tr>
+        <tr style="border-bottom: 1px solid #DDD">
+            <!-- left col -->
+            <td style="padding: 0 20px 10px 40px; vertical-align: top;">
+                <h3>850$ de remise en argent</h3>
+                <p>Le système de chauffage combiné à haute efficacité désigne la combinaison d'un chauffe-eau sans
+                    réservoir et un ventilo- convecteur pour une efficacité énergétique supérieure et certifiée CSA P9.
+                    Cette aide financière est à destination des clients résidentiels (nouveaux ou existants), soumis au
+                    tarif 2. La préadmission est obligatoire avant le début des travaux.</p>
+                <p style="font-style: italic;">Système de chauffage combiné à haute efficacité - Gazifère (gazifere.com)
+                    - TODO: please provide the link address (Chinh)
+                </p>
+                <img src="images/Tech WH1.jpg" width="100%" alt="" style="border-radius: 5px">
+                <h3>Choisissez la meilleure formule pour répondre à vos besoins!</h3>
+                <p>Si vous êtes propriétaire de votre appareil de chauffage, le plan Privilège est fait pour vous :</p>
+                <ul style="padding-left: 15px;">
+                    <li style="margin-bottom: 5px;">prise en charge des coûts de main-d'oeuvre et de rem- placement de
+                        la plupart des pièces défectueuses</li>
+                    <li>comprend un nettoyage de l'appareil (tous les deux ans) pour seulement 13,74$ par mois (un total
+                        de 329,76$ pour 24 mois)</li>
+                </ul>
+                <p>Conditions d'admissibilité :</p>
+                <ul style="padding-left: 15px">
+                    <li style="margin-bottom: 5px">Seul un appareil de moins de 15 ans est admissible.</li>
+                    <li style="margin-bottom: 5px">L'appareil doit être un appareil de chauffage à air pulsé, une
+                        chaudière ou une unité murale utilisée comme principale source de chauffage.</li>
+                    <li style="margin-bottom: 5px">L'appareil couvert doit être utilisé dans une résidence qui ne
+                        comporte pas plus de 3 logements.</li>
+                    <li style="margin-bottom: 5px">Les appareils utilisant un brûleur de conversion ou les appareils à
+                        eau chaude combiné ne sont pas admissibles au plan Privilège.</li>
+                </ul>
+                <a href="https://gazifere.com/plan-de-protection-pour-vos-appareils/"
+                    style="color: #FFB81C; font-style: italic;">Plan Privilège</a>
+            </td>
+            <!-- right col -->
+            <td style="padding-top: 20px; vertical-align: top;">
+                <div
+                    style="background-color: #FFB81C; color: 555; text-align: right; padding: 10px 40px 10px 40px; border-radius: 90px 0 0 90px;">
+                    <h3>Le saviez-vous ?</h3>
+                    <p>Votre compteur doit toujours être visible et ne doit, en aucun cas, être recouvert par un abri,
+                        une bâche ou tout autre structure. Pour des questions de sécurité, pensez à retirer l'amas de
+                        neige qui peut se former autour durant la période hivernale.</p>
+                    <p>Si votre compteur est recouvert de glace, communiquez sans tarder avec notre service à la
+                        clientèle.</p>
+                </div>
+                <div style="margin-right: 40px;">
+                    <h3>La sécurité est l'affaire de tous et une priorité chez Gazifère</h3>
+                    <p>Pour assurer votre sécurité et celle de vos proches, faites entre- tenir vos appareils par un
+                        professionnel certifié en gaz naturel. Profitez-en pour faire vérifier votre système de
+                        ventilation et d'évacuation des gaz.</p>
+                    <p>Conservez l'espace autour de vos appareils à combustion propre. Ne couvrez pas les commandes, les
+                        entrées d'air ou les bouches d'évacuation.</p>
+                    <p>Lors des changements d'heure, Gazifère invite ses clients à vérifiez les piles des détecteurs!
+                    </p>
+                    <p><a href="https://gazifere.com/securite-et-prevention/"
+                            style="font-style: italic; color: #FFB81C;">Sécurité et prévention</a></p>
+                    <h3>Vous partez en vacances ?</h3>
+                    <p>Si votre absence est de courte durée (moins de 2 semaines), Gazifère recommande à ses clients de
+                        baisser la température du thermostat de 2 à 3 degrés.</p>
+                    <p>Plusieurs appareils peuvent être adaptés durant votre péri- ode d'absence pour optimiser l'apport
+                        en chauffage ou en climatisation de votre logement. C'est le cas notamment des chauffe-eau à gaz
+                        naturel standards (reliés à une cheminée) qui peuvent se mettre en mode « vacances ». Pour le
+                        chauffe-eau à évacuation forcée, il peut simplement être débranché pendant votre absence et pour
+                        plus de sûreté, nous vous recommandons de fermer l'alimentation d'eau froide pour limiter les
+                        risques de dégâts en cas de fuite du réservoir. Pour les chauffe-eau électriques, fermez
+                        l'alimentation électrique ainsi que celle d'eau froide. Vous économiserez de l'énergie!</p>
+                    <p><a href="https://gazifere.com/quelques-conseils-avant-de-partir-en-vacances/"
+                            style="font-style: italic; color: #FFB81C;">Pour plus de conseils et astuces : Quelques
+                            conseils avant de partir en vacances</a></p>
+                </div>
+            </td>
+        </tr>
+        <!-- footer -->
+        <tr>
+            <td style="padding: 20px 40px 20px 40px; color: #555" colspan="2">
+                <div style="display: inline-block; width: 20%;">
+                    <a href="mailto:info@gazifere.com" style="color: #555" title="Envoyer un courriel" target="_blank">
+                        <img src="images/mail_24dp_FFB81C_FILL0_wght400_GRAD0_opsz24.png" width="16px"
+                            style="margin-right: 3px; vertical-align: bottom;" />info@gazifere.com
+                    </a>
+                </div>
+                <div style="display: inline-block; width: 20%; text-align: center;">
+                    <a href="tel:+18197718321" style="color: #555" title="Téléphoner au numéro" target="_blank"><img
+                            src="images/call_24dp_FFB81C_FILL0_wght400_GRAD0_opsz24.png" width="16px"
+                            style="margin-right: 3px; vertical-align: bottom;" />1-819-771-8321</a>
+                </div>
+                <div style="display: inline-block; width: 43%; text-align: center;">
+                    <a href="http://maps.google.com/?q=706, boulevard Gréber, Gatineau, QC J8V 3P8" style="color: #555"
+                        title="Rechercher l'adresse" target="_blank"><img
+                            src="images/location_on_24dp_FFB81C_FILL0_wght400_GRAD0_opsz24.png" width="16px"
+                            style="margin-right: 3px; vertical-align: bottom;" />706, boulevard Gréber,
+                        Gatineau, QC J8V 3P8</a>
+                </div>
+                <div style="display: inline-block; width: 15%; text-align: right">
+                    <a href="https://gazifere.com" style="color: #555" title="Visiter le site" target="_blank">
+                        <img src="images/arrow_selector_tool_24dp_FFB81C_FILL0_wght400_GRAD0_opsz24.png" width="16px"
+                            style="margin-right: 3px; vertical-align: bottom;" />gazifere.com
+                    </a>
+                </div>
+            </td>
+        </tr>
+        <!-- <tr>
+            <td colspan="2">
+                <p style="text-align: center; margin-bottom: 40px;">Unable to view? read it <a href="#"
+                        style="color: #FFB81C; font-style: italic;">Online</a></p>
+            </td>
+        </tr> -->
+    </table>
+
+    <script>
+        const clientNumber = 'dynamic_client_number_from_server_side' // the number should come from server side.
+        const clientNumberSelector = document.querySelector('#clientNumberPlaceholder')
+        clientNumberSelector.textContent = clientNumber
+    </script>
+</body>
+
+</html>

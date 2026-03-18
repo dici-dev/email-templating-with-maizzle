@@ -1,0 +1,6 @@
+/* Define variables */
+@layer base {
+  :root {
+    --gzf-color-dark-gray: 83 87 91;
+  }
+}

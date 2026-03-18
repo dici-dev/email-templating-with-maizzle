@@ -1,0 +1,17 @@
+<script props>
+  module.exports = {
+    iconUrl: props['icon-url'],
+    href: props.href,
+    title: props.title,
+    text: props.text
+  }
+</script>
+
+<a
+  class="text-gzf-primary hover:no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block"
+  style="background: url('{{ iconUrl }}')"
+  href="{{ href }}"
+  title="{{ title }}"
+  target="_blank">
+     {{ text }}
+</a>
