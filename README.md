@@ -8,18 +8,18 @@ Test sending email: [Mailtrap](https://mailtrap.io)
 ## Getting Started
 ### Installation
 ```bash
-$ npm i
+$ yarn
 ```
 
 ### Build
 ```bash
-$ npm run build
+$ yarn run build
 ```
 
 ### Local Development
 To see the render on the browser. The compiled templates are in `build_local` folder.
 ```bash
-$ npm run dev
+$ yarn run dev
 ```
 
 ## Project Folders
