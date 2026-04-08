@@ -14,14 +14,16 @@ export default {
   baseURL: '',
   client: {
     number: '@CUSTOMERNUMBER@ - @ACCOUNTNUMBER@', // the value will be replaced by Gazifere's CRM system.
+    address: '@SERVICEADDRESS@', // the value will be replaced by Gazifere's CRM system.
   },
   images: {
     src: {
       query: {
         header: {
           bg: 'images.optimized/banniere-scaled.jpeg',
-          logo: 'images.optimized/Enbridge2024_Gazifere-devient-EGQ-V3-BJ.logo.cropped.png'
-        },
+          logo: 'images.optimized/Enbridge2024_Gazifere-devient-EGQ-V3-BJ.logo.cropped.png',
+          logoEnov: 'images.optimized/ENB-LOGO-Enov-BJ.png'
+      },
         page1: {
           facture: 'images.optimized/facture.jpg'
         },
