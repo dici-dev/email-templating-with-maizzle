@@ -19,7 +19,7 @@ export default {
           bg: '/2024/10/banniere-scaled.jpeg',
           logo: '/2026/01/ENB-LOGO-Gaz-Quebec-B-J.png',
           // logo: '/2024/11/Enbridge2024_Gazifere-devient-EGQ-V3-BJ.logo.cropped.png',
-          logoEnv: '/2026/02/ENB-LOGO-Enov-BJ.png'
+          logoEnov: '/2026/02/ENB-LOGO-Enov-BJ.png'
           // logoEnov: '/wp-content/uploads/2026/01/ENB-LOGO-Enov-BJ.png'
         },
         page1: {
