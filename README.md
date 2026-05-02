@@ -3,7 +3,11 @@ Build templates with frameworks:
 - [Maizzle](https://maizzle.com)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-Test sending email: [Mailtrap](https://mailtrap.io)
+## Send mail test
+[Github repo](https://github.com/dici-dev/sender-mailpit-newsletter-testing)
+- [Resend](https://resend.com/docs/dashboard/emails/introduction) - *prod with API*
+- [Mailpit](https://mailpit.axllent.org/docs/) + [Docker](https://mailpit.axllent.org/docs/install/docker/) - *dev local + hmr*
+- [Mailtrap](https://mailtrap.io) - *tests limited*
 
 ## Getting Started
 ### Installation
@@ -13,13 +17,13 @@ $ yarn
 
 ### Build
 ```bash
-$ yarn run build
+$ yarn build
 ```
 
 ### Local Development
 To see the render on the browser. The compiled templates are in `build_local` folder.
 ```bash
-$ yarn run dev
+$ yarn dev
 ```
 
 ## Project Folders

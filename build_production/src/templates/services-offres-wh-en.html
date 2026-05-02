@@ -51,12 +51,22 @@
     .absolute {
       position: absolute !important
     }
+    .float-right {
+      float: right !important
+    }
+    .float-left {
+      float: left !important
+    }
     .m-0 {
       margin: 0 !important
     }
     .mx-5 {
       margin-left: 20px !important;
       margin-right: 20px !important
+    }
+    .my-6 {
+      margin-top: 24px !important;
+      margin-bottom: 24px !important
     }
     .mb-2 {
       margin-bottom: 8px !important
@@ -90,9 +100,6 @@
     }
     .hidden {
       display: none !important
-    }
-    .w-30 {
-      width: 120px !important
     }
     .w-40 {
       width: 160px !important
@@ -144,8 +151,14 @@
     .border {
       border-width: 1px !important
     }
+    .border-t-2 {
+      border-top-width: 2px !important
+    }
     .border-solid {
       border-style: solid !important
+    }
+    .border-gray-200 {
+      border-color: #e5e7eb !important
     }
     .border-gzf-gray-light {
       border-color: #d0d0ce !important
@@ -228,6 +241,9 @@
     }
     .text-right {
       text-align: right !important
+    }
+    .align-top {
+      vertical-align: top !important
     }
     .align-super {
       vertical-align: super !important
@@ -366,29 +382,56 @@
           <!-- header -->
           <tr>
             <td>
-              <table cellpadding="0" cellspacing="0" role="none">
-                <tr>
-                  <td>
-                    <div class="bg-gzf-primary flex justify-between items-end pl-7 pr-3 pt-12 pb-2" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/banniere-scaled.jpeg') no-repeat top right/100%;">
-                      <h1 class="text-gzf-yellow uppercase m-0 mb-2_5 text-2xl">Welcome to<br>Enbridge Gaz Québec!</h1>
-                      <div>
-                        <img class="w-40 align-super" src="https://enbridgegaz.com/wp-content/uploadsimages.optimized/ENB-LOGO-Enov-BJ.png" alt="Enbridge Gaz Québec logo">
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="px-7 pt-7 pb-3 flex justify-between items-end">
-                    <h3 class="text-lg m-0">Madame, Monsieur,</h3>
-                    <p class="m-0">CLIENT ACCOUNT: @CUSTOMERNUMBER@ - @ACCOUNTNUMBER@</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="px-7">
-                    <p>You are now a Enbridge Gaz Québec customer! Thank you for having chosen an energy source like no other, synonymous with comfort and energy efficiency. We are writing to ask you to please validate the information we have on file to ensure the accuracy of our records.</p>
-                  </td>
-                </tr>
-              </table>
+              <div>
+                <!--[if mso]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:140px;">
+    <v:fill type="frame" src="https://enbridgegaz.com/wp-content/uploads/2024/10/banniere-scaled.jpeg" color="#000000" />
+    <v:textbox inset="0,0,0,0">
+  <![endif]-->
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-image:url('https://enbridgegaz.com/wp-content/uploads/2024/10/banniere-scaled.jpeg'); background-size:cover; background-position:center;">
+                  <tr>
+                    <!-- padding: 40px 5px 0 20px;
+      height: 140px; -->
+                    <!-- <td height="140px" style="padding:40px 5px 0 20px;"> -->
+                    <td style="padding:40px 5px 20px 20px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="left" style="white-space:nowrap;">
+                            <h1 class="text-gzf-yellow uppercase m-0 mb-2_5 text-2xl">Welcome to<br>Enbridge Gaz Québec!</h1>
+                          </td>
+                          <td align="right" style="white-space:nowrap;">
+                            <img class="w-40 align-super" src="https://enbridgegaz.com/wp-content/uploads/2026/01/ENB-LOGO-Gaz-Quebec-B-J.png" alt="Enbridge Gaz Québec logo">
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!--[if mso]>
+    </v:textbox>
+  </v:rect>
+  <![endif]-->
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="padding:40px 20px 0 20px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="left" style="white-space:nowrap; vertical-align:top;">
+                            <h3 class="text-lg m-0">Madame, Monsieur,</h3>
+                          </td>
+                          <td align="right" style="white-space:nowrap; vertical-align:top;">
+                            <p class="m-0">CLIENT ACCOUNT: @CUSTOMERNUMBER@ - @ACCOUNTNUMBER@</p>
+                          </td>
+                        </tr>
+                      </table>
+                      <p>You are now a Enbridge Gaz Québec customer! Thank you for having chosen an energy source like no other, synonymous with comfort and energy efficiency. We are writing to ask you to please validate the information we have on file to ensure the accuracy of our records.</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
 
             </td>
           </tr>
@@ -400,38 +443,39 @@
                 <tr>
                   <td class="gzf-responsive">
                     <!-- col left -->
-                    <div class="gzf-responsive-width">
-                      <div class="gzf-space-col-left">
-                        <p>If you are the owner of this address, and it is being rented by someone:</p>
-                        <ul class="gzf-list-pl">
-                          <li>Please notify your tenant that he or she should contact us as soon as possible to complete the transfer
-                            of responsibility. We will not be able to make any changes without your tenant’s consent.</li>
-                        </ul>
-                        <p>If you are the resident owner of this address or the resident tenant at this address:</p>
-                        <ul class="gzf-list-pl">
-                          <li>To complete your file, please notify us of any incorrect or missing information and your corrections by
-                            calling our Customer Portal at
+                    <div class="gzf-space-col-left gzf-responsive-width">
+                      <!-- <div class="gzf-space-col-left"> -->
+                      <p>If you are the owner of this address, and it is being rented by someone:</p>
+                      <ul class="gzf-list-pl">
+                        <li>Please notify your tenant that he or she should contact us as soon as possible to complete the transfer
+                          of responsibility. We will not be able to make any changes without your tenant’s consent.</li>
+                      </ul>
+                      <p>If you are the resident owner of this address or the resident tenant at this address:</p>
+                      <ul class="gzf-list-pl">
+                        <li>To complete your file, please notify us of any incorrect or missing information and your corrections by
+                          calling our Customer Portal at
 
-                            <a class="text-gzf-yellow italic hover-no-underline" href="tel:+18197718321" target="_blank">1-819-771-8321</a>
-                            , or by writing to
+                          <a class="text-gzf-yellow italic hover-no-underline" href="tel:+18197718321" target="_blank">1-819-771-8321</a>
+                          , or by writing to
 
-                            <a class="text-gzf-yellow italic hover-no-underline" href="mailto:infogaz@enbridge.com" target="_blank">infogaz@enbridge.com</a>
-                            .
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="gzf-space-col-left">
-                        <p>Click below to access a form you will need to fill out (it will only take a few minutes):</p>
-                        <p>
+                          <a class="text-gzf-yellow italic hover-no-underline" href="mailto:infogaz@enbridge.com" target="_blank">infogaz@enbridge.com</a>
+                          .
+                        </li>
+                      </ul>
+                      <!-- </div> -->
+                      <!-- <div class="gzf-space-col-left"> -->
+                      <p>Click below to access a form you will need to fill out (it will only take a few minutes):</p>
+                      <p>
 
-                          <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/welcome-to-enbridge-gaz-quebec/" target="_blank">Welcome to Enbridge Gaz - Enbridge Gaz Québec</a>
-                        </p>
-                        <p>According to our terms of service, the contract between you and Enbridge Gaz Québec comes into effect once your
-                          natural gas service application is approved. Even though the contract is not in writing, it remains in
-                          effect until it is terminated by the customer or Enbridge Gaz Québec.</p>
-                      </div>
-                      <h3 class="gzf-space-col-left">Manage your consumption and your bills from your Customer Portal!
-                      </h3>
+                        <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/welcome-to-enbridge-gaz-quebec/" target="_blank">Welcome to Enbridge Gaz - Enbridge Gaz Québec</a>
+                      </p>
+                      <p>According to our terms of service, the contract between you and Enbridge Gaz Québec comes into effect once your
+                        natural gas service application is approved. Even though the contract is not in writing, it remains in
+                        effect until it is terminated by the customer or Enbridge Gaz Québec.</p>
+                      <!-- </div> -->
+                      <!-- <h3 class="gzf-space-col-left">Manage your consumption and your bills from your Customer Portal!
+        </h3> -->
+                      <h3>Manage your consumption and your bills from your Customer Portal!</h3>
                       <!--
 By default, the rounded side is on the right.
 Set 'left' attribute to have the rounded side on the left.
@@ -449,7 +493,7 @@ Set 'left' attribute to have the rounded side on the left.
 
                       </div>
 
-                      <p class="gzf-space-col-left">Your Customer Portal, accessible through
+                      <p>Your Customer Portal, accessible through
 
                         <a class="text-gzf-yellow italic hover-no-underline" href="https://enbridgegaz.com/en/" target="_blank">www.enbridgegaz.com</a>
                         , lets you check your bill, your transaction history, your current charges and
@@ -543,7 +587,7 @@ Set 'left' attribute to have the rounded side on the left.
                             <!--[if mso]>
       <i style="mso-font-width: 150%; mso-text-raise: 30px;" hidden="">&emsp;</i>
     <![endif]-->
-                            <span class="text-sm" style="mso-text-raise: 16px">
+                            <span class="text-sm">
             FIND OUT ABOUT THE CASH INCENTIVES FOR RESIDENTIALS
           </span>
                             <!--[if mso]>
@@ -641,40 +685,70 @@ Set 'left' attribute to have the rounded side on the left.
           <!-- footer -->
           <tr>
             <td>
-              <div class="gzf-responsive justify-between sm-items-center px-7 pb-5">
-                <div class="justify-self-start sm-justify-self-center pb-2 sm-mb-3">
+              <!-- <div class="gzf-responsive justify-between sm:items-center px-7 pb-5">
+  <div class="justify-self-start sm:justify-self-center pb-2 sm:mb-3">
+    <x-link-icon icon-url="https://enbridgegaz.com/wp-content/uploads/2024/10/enveloppe.png" href="mailto:infogaz@enbridge.com" title="Send an email" text="infogaz@enbridge.com" />
+  </div>
+  <div class="justify-self-start sm:justify-self-center pb-2 sm:mb-3">
+    <x-link-icon icon-url="https://enbridgegaz.com/wp-content/uploads/2024/10/tel.png" href="tel:+1-819-771-8321" title="Call the number" text="1-819-771-8321" />
+  </div>
+  <div class="justify-self-center pb-2 sm:mb-3">
+    <x-link-icon icon-url="https://enbridgegaz.com/wp-content/uploads/2024/10/localisation.png" href="http://maps.google.com/?q=706, boulevard Gréber, Gatineau, QC J8V 3P8" title="Search the address" text="706, boulevard Gréber, Gatineau, QC J8V 3P8" />
+  </div>
+  <div class="justify-self-end sm:justify-self-center pb-2 sm:mb-3">
+    <x-link-icon icon-url="https://enbridgegaz.com/wp-content/uploads/2024/10/clic.png" href="https://www.enbridgegaz.com/en/" title="Visit the site" text="enbridgegaz.com" />
+  </div>
+</div> -->
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="pl-7 pb-5">
 
 
-                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/enveloppe.png')" href="mailto:infogaz@enbridge.com" title="Send an email" target="_blank">
-                    infogaz@enbridge.com
-                  </a>
-
-                </div>
-                <div class="justify-self-start sm-justify-self-center pb-2 sm-mb-3">
+                    <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/enveloppe.png')" href="mailto:infogaz@enbridge.com" title="Send an email" target="_blank">
+                      infogaz@enbridge.com
+                    </a>
 
 
-                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/tel.png')" href="tel:+1-819-771-8321" title="Call the number" target="_blank">
-                    1-819-771-8321
-                  </a>
+                  </td>
 
-                </div>
-                <div class="justify-self-center pb-2 sm-mb-3">
+                  <!-- <td width="100%">&nbsp;</td> -->
 
-
-                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/localisation.png')" href="https://enbridgegaz.com/wp-content/uploadshttp://maps.google.com/?q=706, boulevard Gréber, Gatineau, QC J8V 3P8" title="Search the address" target="_blank">
-                    706, boulevard Gréber, Gatineau, QC J8V 3P8
-                  </a>
-
-                </div>
-                <div class="justify-self-end sm-justify-self-center pb-2 sm-mb-3">
+                  <td class="text-center  pb-5">
 
 
-                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/clic.png')" href="https://www.enbridgegaz.com/en/" title="Visit the site" target="_blank">
-                    enbridgegaz.com
-                  </a>
+                    <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/tel.png')" href="tel:+1-819-771-8321" title="Call the number" target="_blank">
+                      1-819-771-8321
+                    </a>
 
-                </div>
-              </div>
+
+                  </td>
+
+                  <!-- <td width="100%">&nbsp;</td> -->
+
+                  <td class="text-center pb-5">
+
+
+                    <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/localisation.png')" href="https://enbridgegaz.com/wp-content/uploadshttp://maps.google.com/?q=706, boulevard Gréber, Gatineau, QC J8V 3P8" title="Search the address" target="_blank">
+                      706, boulevard Gréber, Gatineau, QC J8V 3P8
+                    </a>
+
+
+                  </td>
+
+                  <!-- <td width="100%">&nbsp;</td> -->
+
+                  <!-- <td align="right" class="pr-7 text-right"> -->
+                  <td class="pr-7 text-right pb-5">
+
+
+                    <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/clic.png')" href="https://www.enbridgegaz.com/en/" title="Visit the site" target="_blank">
+                      enbridgegaz.com
+                    </a>
+
+                  </td>
+                </tr>
+              </table>
 
             </td>
           </tr>

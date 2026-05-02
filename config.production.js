@@ -17,10 +17,15 @@ export default {
       query: {
         header: {
           bg: '/2024/10/banniere-scaled.jpeg',
-          logo: '/2024/11/Enbridge2024_Gazifere-devient-EGQ-V3-BJ.logo.cropped.png'
+          logo: '/2026/01/ENB-LOGO-Gaz-Quebec-B-J.png',
+          // logo: '/2024/11/Enbridge2024_Gazifere-devient-EGQ-V3-BJ.logo.cropped.png',
+          logoEnv: '/2026/02/ENB-LOGO-Enov-BJ.png'
+          // logoEnov: '/wp-content/uploads/2026/01/ENB-LOGO-Enov-BJ.png'
         },
         page1: {
-          facture: '/2024/10/facture.jpg'
+          facture: '/2024/10/facture.jpg',
+          facebook: '/wp-content/uploads/2026/01/fbIcon1.png',
+          linkedin: '/wp-content/uploads/2026/01/linkedinIcon.png'
         },
         page2: {
           waterHeater: '/2024/10/kp-enbridge-gazfinal-230801-011.jpeg'

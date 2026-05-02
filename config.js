@@ -21,11 +21,13 @@ export default {
       query: {
         header: {
           bg: 'images.optimized/banniere-scaled.jpeg',
-          logo: 'images.optimized/Enbridge2024_Gazifere-devient-EGQ-V3-BJ.logo.cropped.png',
+          logo: 'images.optimized/ENB-LOGO-Gaz-Quebec-B-J.png',
           logoEnov: 'images.optimized/ENB-LOGO-Enov-BJ.png'
       },
         page1: {
-          facture: 'images.optimized/facture.jpg'
+          facture: 'images.optimized/facture.jpg',
+          facebook: 'images.optimized/fbIcon1.png',
+          linkedin: 'images.optimized/linkedinIcon.png',
         },
         page2: {
           waterHeater: 'images.optimized/kp-enbridge-gazfinal-230801-011.jpeg'
