@@ -64,10 +64,6 @@
       margin-left: 20px !important;
       margin-right: 20px !important
     }
-    .my-6 {
-      margin-top: 24px !important;
-      margin-bottom: 24px !important
-    }
     .mb-2 {
       margin-bottom: 8px !important
     }
@@ -151,14 +147,8 @@
     .border {
       border-width: 1px !important
     }
-    .border-t-2 {
-      border-top-width: 2px !important
-    }
     .border-solid {
       border-style: solid !important
-    }
-    .border-gray-200 {
-      border-color: #e5e7eb !important
     }
     .border-gzf-gray-light {
       border-color: #d0d0ce !important
@@ -382,31 +372,79 @@
           <!-- header -->
           <tr>
             <td>
-              <table cellpadding="0" cellspacing="0" role="none">
-                <tr>
-                  <td>
-                    <div class="bg-gzf-primary flex justify-between items-end pl-7 pr-3 pt-12 pb-2" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/banniere-scaled.jpeg') no-repeat top right/100%;">
-                      <h1 class="text-gzf-yellow uppercase m-0 mb-2_5 text-2xl">Bienvenue chez<br>Enbridge Gaz Québec!</h1>
-                      <div>
-                        <img class="w-40 align-super" src="https://enbridgegaz.com/wp-content/uploads/2026/01/ENB-LOGO-Gaz-Quebec-B-J.png" alt="Enbridge Gaz Québec logo">
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="px-7 pt-7 pb-3 flex justify-between items-end">
-                    <h3 class="text-lg m-0">Madame, Monsieur,</h3>
-                    <p class="m-0">NUMÉRO DE CLIENT: @CUSTOMERNUMBER@ - @ACCOUNTNUMBER@</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="px-7">
-                    <p>Vous êtes client maintenant chez Enbridge Gaz Québec! Merci d'avoir choisi une source d'énergie sans pareil,
-                      synonyme de confort et d'efficacité énergétique. Pour compléter votre dossier, il est important de
-                      valider l'exactitude des informations reçues, relatives à votre compte.</p>
-                  </td>
-                </tr>
-              </table>
+              <!-- <table>
+  <tr><td>
+    <div
+      class="bg-gzf-primary flex justify-between items-end pl-7 pr-3 pt-12 pb-2"
+      style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/banniere-scaled.jpeg') no-repeat top right/100%;">
+      <h1 class="text-gzf-yellow uppercase m-0 mb-2.5 text-2xl">Bienvenue chez<br>Enbridge Gaz Québec!</h1>
+      <div>
+        <img class="w-40 align-super"
+          src="https://enbridgegaz.com/wp-content/uploads/2026/01/ENB-LOGO-Gaz-Quebec-B-J.png"
+          alt="Enbridge Gaz Québec logo" />
+      </div>
+    </div>
+  </td></tr>
+  <tr><td class="px-7 pt-7 pb-3 flex justify-between items-end">
+    <h3 class="text-lg m-0">Madame, Monsieur,</h3>
+    <p class="m-0">NUMÉRO DE CLIENT: @CUSTOMERNUMBER@ - @ACCOUNTNUMBER@</p>
+  </td></tr>
+  <tr><td class="px-7">
+    <p>Vous êtes client maintenant chez Enbridge Gaz Québec! Merci d'avoir choisi une source d'énergie sans pareil,
+      synonyme de confort et d'efficacité énergétique. Pour compléter votre dossier, il est important de
+      valider l'exactitude des informations reçues, relatives à votre compte.</p>
+  </td></tr>
+</table> -->
+
+              <div>
+                <!--[if mso]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px;height:140px;">
+    <v:fill type="frame" src="https://enbridgegaz.com/wp-content/uploads/2024/10/banniere-scaled.jpeg" color="#000000" />
+    <v:textbox inset="0,0,0,0">
+  <![endif]-->
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-image:url('https://enbridgegaz.com/wp-content/uploads/2024/10/banniere-scaled.jpeg'); background-size:cover; background-position:center; background-color:#54585a;">
+                  <tr>
+                    <td style="padding:40px 5px 20px 20px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="left" style="white-space:nowrap;">
+                            <h1 class="text-gzf-yellow uppercase m-0 mb-2_5 text-2xl">Bienvenue chez<br>Enbridge Gaz Québec!</h1>
+                          </td>
+                          <td align="right" style="white-space:nowrap;">
+                            <img class="w-40 align-super" src="https://enbridgegaz.com/wp-content/uploads/2026/01/ENB-LOGO-Gaz-Quebec-B-J.png" alt="Enbridge Gaz Québec logo">
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!--[if mso]>
+    </v:textbox>
+  </v:rect>
+  <![endif]-->
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="padding:40px 20px 0 20px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="left" style="white-space:nowrap; vertical-align:top;">
+                            <h3 class="text-lg m-0">Madame, Monsieur,</h3>
+                          </td>
+                          <td align="right" style="white-space:nowrap; vertical-align:top;">
+                            <p class="m-0">NUMÉRO DE CLIENT: @CUSTOMERNUMBER@ - @ACCOUNTNUMBER@</p>
+                          </td>
+                        </tr>
+                      </table>
+                      <p>Vous êtes maintenant client Enbridge Gaz Québec! Merci d'avoir choisi une source d'énergie comme aucune autre,
+                        synonyme de confort et d'efficacité énergétique. Nous vous prions de valider les informations que nous avons à jour
+                        afin de garantir l'exactitude de nos registres.</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
 
             </td>
           </tr>
@@ -512,10 +550,22 @@ Set 'left' attribute to have the rounded side on the left.
             </td>
           </tr>
 
+          <!-- divider -->
           <tr>
             <td>
-
-              <div role="separator" class="bg-slate-300" style="height: 1px; line-height: 1px; `background-color: ${color}; margin: 0; margin-top: 24px; margin-bottom: 24px; `margin-left: ${spaceX}; margin-right: ${spaceX}; `margin-top: ${top}; `margin-bottom: ${bottom}; `margin-right: ${right}` }}` }}` }}` }}` }}` }}">&zwj;</div>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding: 16px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="border-top: 2px solid #e5e7eb; font-size:0; line-height:0;">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
 
@@ -613,12 +663,25 @@ Set 'left' attribute to have the rounded side on the left.
             </td>
           </tr>
 
+          <!-- divider -->
           <tr>
             <td>
-
-              <div role="separator" class="bg-slate-300" style="height: 1px; line-height: 1px; `background-color: ${color}; margin: 0; margin-top: 24px; margin-bottom: 24px; `margin-left: ${spaceX}; margin-right: ${spaceX}; `margin-top: ${top}; `margin-bottom: ${bottom}; `margin-right: ${right}` }}` }}` }}` }}` }}` }}">&zwj;</div>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding: 16px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="border-top: 2px solid #e5e7eb; font-size:0; line-height:0;">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
+
 
           <!-- page 3 -->
           <tr>
@@ -695,50 +758,80 @@ Set 'left' attribute to have the rounded side on the left.
             </td>
           </tr>
 
+          <!-- divider -->
           <tr>
             <td>
-
-              <div role="separator" class="bg-slate-300" style="height: 1px; line-height: 1px; `background-color: ${color}; margin: 0; margin-top: 24px; margin-bottom: 24px; `margin-left: ${spaceX}; margin-right: ${spaceX}; `margin-top: ${top}; `margin-bottom: ${bottom}; `margin-right: ${right}` }}` }}` }}` }}` }}` }}">&zwj;</div>
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding: 16px 0;">
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="border-top: 2px solid #e5e7eb; font-size:0; line-height:0;">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
             </td>
           </tr>
+
 
           <!-- footer -->
           <tr>
             <td>
-              <div class="gzf-responsive justify-between sm-items-center px-7 pb-5">
-                <div class="justify-self-start sm-justify-self-center pb-2 sm-mb-3">
+              <!-- <div class="gzf-responsive justify-between sm:items-center px-7 pb-5">
+  <div class="justify-self-start sm:justify-self-center pb-2 sm:mb-3">
+    <x-link-icon icon-url="https://enbridgegaz.com/wp-content/uploads/2024/10/enveloppe.png" href="mailto:infogaz@enbridge.com" title="Envoyer un courriel" text="infogaz@enbridge.com" />
+  </div>
+  <div class="justify-self-start sm:justify-self-center pb-2 sm:mb-3">
+    <x-link-icon icon-url="https://enbridgegaz.com/wp-content/uploads/2024/10/tel.png" href="tel:+1-819-771-8321" title="Téléphoner au numéro" text="1-819-771-8321" />
+  </div>
+  <div class="justify-self-center pb-2 sm:mb-3">
+    <x-link-icon icon-url="https://enbridgegaz.com/wp-content/uploads/2024/10/localisation.png" href="http://maps.google.com/?q=706, boulevard Gréber, Gatineau, QC J8V 3P8" title="Rechercher l'adresse" text="706, boulevard Gréber, Gatineau, QC J8V 3P8" />
+  </div>
+  <div class="justify-self-end sm:justify-self-center pb-2 sm:mb-3">
+    <x-link-icon icon-url="https://enbridgegaz.com/wp-content/uploads/2024/10/clic.png" href="www.enbridgegaz.com" title="Visiter le site" text="enbridgegaz.com" />
+  </div>
+</div> -->
+
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td class="pl-7 pb-5">
 
 
-                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/enveloppe.png')" href="mailto:infogaz@enbridge.com" title="Envoyer un courriel" target="_blank">
-                    infogaz@enbridge.com
-                  </a>
+                    <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/enveloppe.png')" href="mailto:infogaz@enbridge.com" title="Envoyer un courriel" target="_blank">
+                      infogaz@enbridge.com
+                    </a>
 
-                </div>
-                <div class="justify-self-start sm-justify-self-center pb-2 sm-mb-3">
-
-
-                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/tel.png')" href="tel:+1-819-771-8321" title="Téléphoner au numéro" target="_blank">
-                    1-819-771-8321
-                  </a>
-
-                </div>
-                <div class="justify-self-center pb-2 sm-mb-3">
+                  </td>
+                  <td class="text-center  pb-5">
 
 
-                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/localisation.png')" href="https://enbridgegaz.com/wp-content/uploadshttp://maps.google.com/?q=706, boulevard Gréber, Gatineau, QC J8V 3P8" title="Rechercher l&#039;adresse" target="_blank">
-                    706, boulevard Gréber, Gatineau, QC J8V 3P8
-                  </a>
+                    <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/tel.png')" href="tel:+1-819-771-8321" title="Téléphoner au numéro" target="_blank">
+                      1-819-771-8321
+                    </a>
 
-                </div>
-                <div class="justify-self-end sm-justify-self-center pb-2 sm-mb-3">
+                  </td>
+                  <td class="text-center pb-5">
 
 
-                  <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/clic.png')" href="https://enbridgegaz.com/wp-content/uploadswww.enbridgegaz.com" title="Visiter le site" target="_blank">
-                    enbridgegaz.com
-                  </a>
+                    <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/localisation.png')" href="https://enbridgegaz.com/wp-content/uploadshttp://maps.google.com/?q=706, boulevard Gréber, Gatineau, QC J8V 3P8" title="Rechercher l&#039;adresse" target="_blank">
+                      706, boulevard Gréber, Gatineau, QC J8V 3P8
+                    </a>
 
-                </div>
-              </div>
+                  </td>
+                  <td class="pr-7 text-right pb-5">
+
+
+                    <a class="text-gzf-primary hover-no-underline bg-gzf-icon-size bg-no-repeat pl-6 leading-normal inline-block" style="background: url('https://enbridgegaz.com/wp-content/uploads/2024/10/clic.png')" href="https://enbridgegaz.com/wp-content/uploadswww.enbridgegaz.com" title="Visiter le site" target="_blank">
+                      enbridgegaz.com
+                    </a>
+
+                  </td>
+                </tr>
+              </table>
 
             </td>
           </tr>
